@@ -2,7 +2,7 @@ const service = require("./movies.service");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 
 //list all movies. If the req has "is_showing" as param, it return only the movies that are currently showing
-async function list(req, res, next) {
+async function list(req, res) {
     let showing = req.query.is_showing;
     let data;
 
